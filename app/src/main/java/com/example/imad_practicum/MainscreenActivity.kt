@@ -25,9 +25,9 @@ class MainscreenActivity : AppCompatActivity() {
         @SuppressLint("MissingSuperCall")
         fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
-            setContentView(R.layout.mainscreen)
+            setContentView(R.layout.mainscreen)// will appear on the second page
 
-            findViewById<TextView>(R.id.txtTotal)
+            findViewById<TextView>(R.id.txtTotal)// button that will display all total
             findViewById<Button>(R.id.btnAdd)
             findViewById<Button>(R.id.btnView)
 
@@ -64,6 +64,7 @@ class MainscreenActivity : AppCompatActivity() {
 
             }
         }
+
 
 
 
