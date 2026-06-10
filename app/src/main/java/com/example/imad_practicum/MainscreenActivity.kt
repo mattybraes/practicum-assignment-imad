@@ -19,7 +19,7 @@ class MainscreenActivity : AppCompatActivity() {
             "item=flashlight, category=safety, quantity=2, comment=check for batteries(AA)")// adding the information
 
         fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
+            onCreate(savedInstanceState)
             setContentView(R.layout.mainscreen) //declaring array
 
             //get the items text view
