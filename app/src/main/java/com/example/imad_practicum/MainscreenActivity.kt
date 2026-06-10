@@ -50,7 +50,7 @@ class MainscreenActivity : AppCompatActivity() {
             total = 0
 
             for (qty in quantities) {
-                total += qty
+                total += qty //total will equal quantity
 
 
                 txtTotal.text = "total items packed: $total"
@@ -88,6 +88,10 @@ class MainscreenActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+    }
+
+    fun PutStringArrayListExtra(string: String, quantities: ArrayList<Int>) {
+        TODO("Not yet implemented")
     }
 
     fun PutStringArrayListExtra(string: String, items: ArrayList<String>) {
