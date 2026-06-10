@@ -27,8 +27,7 @@ class lastPage : AppCompatActivity() {
 
           var details = ""
 
-
-       }
+         if (items != null && quantities != null) {
 
 
 
