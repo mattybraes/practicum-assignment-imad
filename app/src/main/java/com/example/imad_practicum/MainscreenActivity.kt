@@ -26,6 +26,15 @@ class MainscreenActivity : AppCompatActivity() {
             val itemsTextView = findViewById<TextView>(R.id.itemsTextView)
             //set the text views text to the first item.
             itemsTextView.text = items[0]
+
+            //add all items to the display string
+            var itemsDisplay = ""
+            itemsDisplay +="${items[0]}\n"
+            itemsDisplay +="${items[1]}\n"
+            itemsDisplay +="${items[2]}\n"
+
+            //now set the item text view to show the item display
+            itemsTextView.text = itemsDisplay
         }
 
 
