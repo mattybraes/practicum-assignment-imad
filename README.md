@@ -12,7 +12,7 @@ how this was done was by using arrays and loops to work out and transfer informa
 
 not everything is working because when i attempt to run the code the emulator does not work.
 
-REFRENCES
+unable to finish
 
 
 
