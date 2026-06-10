@@ -1,6 +1,8 @@
 package com.example.imad_practicum
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -13,29 +15,29 @@ class MainscreenActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.mainscreen)
 
-        //using array to organise a checklist
-        val items = arrayOf<String>("Item=tent, category=shelter, quantity=1, comments=4 person and water proof",
-            "item=marshmallows, category=food, quantity=3, comment=for S'mores (mega size",
-            "item=flashlight, category=safety, quantity=2, comment=check for batteries(AA)")// adding the information
+      val items = arrayListOf("tent","marshmallows", "flashlight")
+        val categories = arrayListOf("shelter", "food", "safety")
+        val quantities = arrayListOf(1, 3, 2)
 
+        @SuppressLint("MissingSuperCall")
         fun onCreate(savedInstanceState: Bundle?) {
-            onCreate(savedInstanceState)
-            setContentView(R.layout.mainscreen) //declaring array
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.mainscreen)
 
-            //get the items text view
-            val itemsTextView = findViewById<TextView>(R.id.itemsTextView)
-            //set the text views text to the first item.
-            itemsTextView.text = items[0]
+            val txtTotal = findViewById<TextView>(R.id.txtTotal)
+            val btnAdd = findViewById<Button>(R.id.btnAdd)
+            val btnView = findViewById<Button>(R.id.btnView)
 
-            //add all items to the display string
-            var itemsDisplay = ""
-            itemsDisplay +="${items[0]}\n"
-            itemsDisplay +="${items[1]}\n"
-            itemsDisplay +="${items[2]}\n"
-
-            //now set the item text view to show the item display
-            itemsTextView.text = itemsDisplay
+            var total = 0
+            for (qty in quantities) {
+                total += qty
+            }
         }
+
+        
+
+
+
 
 
 
