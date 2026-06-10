@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+private val MainscreenActivity.total: String
+
 class MainscreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +26,7 @@ class MainscreenActivity : AppCompatActivity() {
 
         @SuppressLint("MissingSuperCall")
         fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
+            onCreate(savedInstanceState)
             setContentView(R.layout.mainscreen)// will appear on the second page
 
             findViewById<TextView>(R.id.txtTotal)// button that will display all total
